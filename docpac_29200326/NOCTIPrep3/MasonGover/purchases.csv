@@ -1,4 +1,4 @@
-Customer Name, Order #, Address, Item, Price, Quantity
+Customer, Order ID, Address, Item, Price, Quantity
 John Smith, 1, 420 Fleet St., 20 Marbles, $17.99, 2
 John Smith, 1, 420 Fleet St., 1 Shooter, $6.99, 1
 Susy Suss, 1, 67 Sneaky St., Murder Weapon, $69.50, 4

@@ -5,23 +5,19 @@ const lines = fileContents.split("\n");
 const headerContents = lines.shift().split(",")
 
 let total = 0
-const purchases = new Map()
+const orders = new Map()
 
 for (const line of lines) {
     const order = {}
     const entries = line.split(",")
     for (let i = 0; i < entries.length; i++) {
-        order[headerContents[i].trim()] = entries[i];
+        order[headerContents[i].trim()] = entries[i].trim();
     }
 
-    const customerName = order["Customer Name"]
-    if (!purchases.get(customerName)) {
-        purchases.set(customerName, []);
-    }
-
-    purchases.get(customerName).push(order)
+    const orderId = order["Order ID"];
+    orders.set(orderId, order)
 }
 
-for (const purchase of purchases) {
-    console.log(purchase)
+for (const order of orders) {
+    // todo
 }
